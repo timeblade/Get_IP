@@ -19,11 +19,7 @@ class Get_IP(toga.App):
         We then create a main window (with a name matching the app), and
         show the main window.
         """
-        main_box = toga.Box()
-
         main_box = toga.Box(style=Pack(direction=COLUMN))
-
-        name_box = toga.Box(style=Pack(direction=ROW, padding=5))
 
         button = toga.Button(
             '获取本机本地IP和公网IP',
@@ -31,7 +27,6 @@ class Get_IP(toga.App):
             style=Pack(padding=5)
         )
 
-        main_box.add(name_box)
         main_box.add(button)
 
         self.main_window = toga.MainWindow(title=self.formal_name)
@@ -47,6 +42,8 @@ class Get_IP(toga.App):
 
         # 获取公网IP地址
         open_ip = requests.get('http://ifconfig.me/ip').text
+        local_open_ip = '本地IP：' + local_ip + '\n' + '公网IP：' + open_ip
+        self.main_window.info_dialog('本地IP和公网IP', local_open_ip)
 
 
 def main():
