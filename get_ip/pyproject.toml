@@ -1,0 +1,52 @@
+[tool.briefcase]
+project_name = "Get_IP"
+bundle = "com.github"
+version = "0.0.1"
+url = "https://github.com/timeblade/Get_IP"
+license = "BSD license"
+author = 'timeblade'
+author_email = "yuxueliuxing@163.com"
+
+[tool.briefcase.app.get_ip]
+formal_name = "Get_IP"
+description = "获取本机本地IP和公网IP地址"
+icon = "src/get_ip/resources/get_ip"
+sources = ['src/get_ip']
+requires = [
+]
+
+
+[tool.briefcase.app.get_ip.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev34',
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.get_ip.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev34',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.get_ip.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev34',
+]
+
+# Mobile deployments
+[tool.briefcase.app.get_ip.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev34',
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.get_ip.android]
+requires = [
+    'toga-android>=0.3.0.dev34'
+]

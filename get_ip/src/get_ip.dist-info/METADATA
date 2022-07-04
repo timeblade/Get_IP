@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.8
+Name: get_ip
+Formal-Name: Get_IP
+App-ID: com.github.get_ip
+Version: 0.0.1
+Home-page: https://github.com/timeblade/Get_IP
+Author: timeblade
+Author-email: yuxueliuxing@163.com
+Summary: 获取本机本地IP和公网IP地址
